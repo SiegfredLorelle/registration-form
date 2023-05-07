@@ -36,11 +36,15 @@ main {
   background: rgb(104, 57, 65);
   margin: auto;
   padding: 2em;
+}
+
+form {
   display: grid;
   gap: 0.5em;
   grid-template-rows: 2fr;
   grid-template-columns: repeat(2, 1fr);
 }
+
 
 .input-container {
   margin: auto;
@@ -50,13 +54,26 @@ fieldset {
   padding: 1em;
 }
 
-input[type="text"] {
+
+input {
   height: 100%;
   width: 100%;
   font-size: var(--small-font-size);
   font-family: 'Saira Condensed', Arial ,sans-serif;
   padding:  0.75em;
   border-radius: 10px;
+
+}
+
+/* input[type="text"] {
+} */
+
+input[type="submit"] {
+  grid-column: span 2;
+  /* max-width: fit-content; */
+  padding: 0.25em 1em;
+  margin: 0.25em auto;
+  width: fit-content;
 }
 
 
@@ -65,8 +82,17 @@ input[type="text"] {
 
 
 @media (min-width: 1024px) {
+/*   
+  :root {
+    --small-font-size: calc(0.15 + 1vw);
+    --regular-font-size: calc(0.25em + 1vw);
+    --largest-font-size: calc(2em + 1vw);
+  }
+   */
   main {
     border-radius: 20px;
     margin: 3em auto;
   }
+
 }
+
