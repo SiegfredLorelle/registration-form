@@ -2,6 +2,7 @@
   --bg-clr: #1B2430;
   --font-clr: #ffffffef;
 
+  --small-font-size: calc(0.15 + 1vw);
   --regular-font-size: calc(0.25em + 1vw);
   --largest-font-size: calc(2em + 1vw);
 }
@@ -45,6 +46,18 @@ main {
   margin: auto;
 }
 
+fieldset {
+  padding: 1em;
+}
+
+input[type="text"] {
+  height: 100%;
+  width: 100%;
+  font-size: var(--small-font-size);
+  font-family: 'Saira Condensed', Arial ,sans-serif;
+  padding:  0.75em;
+  border-radius: 10px;
+}
 
 
 
