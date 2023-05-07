@@ -1,0 +1,17 @@
+:root {
+  --bg-clr: #1B2430;
+  --font-clr: #ffffffef;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  background-color: var(--bg-clr);
+  color: var(--font-clr);
+}
