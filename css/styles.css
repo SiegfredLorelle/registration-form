@@ -1,6 +1,8 @@
 :root {
   --bg-clr: #1B2430;
   --font-clr: #ffffffef;
+
+  --regular-font-size: calc(0.25em + 1vw);
   --largest-font-size: calc(2em + 1vw);
 }
 
@@ -16,12 +18,21 @@ body {
   background-color: var(--bg-clr);
   color: var(--font-clr);
   font-family: 'Saira Condensed', Arial ,sans-serif;
+  font-size: var(--regular-font-size);
+}
+
+
+h1 {
+  text-align: center;
+  font-size: var(--largest-font-size);
+  padding: 0 1em 1em 1em;
+  grid-column: span 2;
 }
 
 main {
   width: 100%;
   max-width: 1024px;
-  background: pink;
+  background: rgb(104, 57, 65);
   margin: auto;
   padding: 2em;
   display: grid;
@@ -30,15 +41,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
 }
 
-h1 {
-  text-align: center;
-  font-size: var(--largest-font-size);
-  padding: 1em;
-  grid-column: span 2;
-}
-
 .input-container {
-  /* grid-column: 1 / 2; */
   margin: auto;
 }
 
