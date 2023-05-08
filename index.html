@@ -60,9 +60,46 @@
           <legend>Contact Number</legend>
 
           <div class="input-container">
-            <input type="tel" pattern="^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+            <input type="tel" 
+            pattern="^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
             placeholder="+63 945 160 5205" required>
             <label>Mobile Number</label>
+          </div>
+
+        </fieldset>
+        <fieldset class="input-group-container wide-fieldset">
+          <legend>Address</legend>
+
+          <div class="input-container">
+            <input type="text" 
+            placeholder="25 Oaks Avenue" required>
+            <label>Street Address</label>
+          </div>
+
+          <div class="input-container">
+            <input type="text" 
+            placeholder="Oaks Residences" required>
+            <label>Apartment / Unit / Building / Floor / etc.</label>
+          </div>
+
+          <div class="wide-input">
+
+            <div class="input-container">
+              <input type="text" placeholder="Cainta" required>
+              <label>City</label>
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Rizal" required>
+              <label>State / Province</label>
+            </div>
+            </div>
+
+          </div>
+
+          <div class="input-container">
+ 
+            <input type="number" placeholder="1900" required>
+            <label>Postal / Zip Code</label>
           </div>
 
         </fieldset>

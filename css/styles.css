@@ -63,7 +63,12 @@ fieldset.input-group-container {
   width: 100%;
 
   /* border: 0; */
+}
 
+
+fieldset.input-group-container.wide-fieldset {
+  grid-column: span 2;
+  grid-auto-flow: row;
 }
 
 fieldset.input-group-container:hover {
@@ -85,7 +90,16 @@ input {
   font-family: 'Saira Condensed', Arial ,sans-serif;
   padding:  0.5em;
   border-radius: 5px;
+}
 
+div.wide-input {
+  /* background-color: red; */
+  display: grid;
+  grid-auto-flow: column;
+  flex-direction: row;
+  /* padding:  0.5em; */
+
+  /* justify-content: center; */
 }
 
 label {
