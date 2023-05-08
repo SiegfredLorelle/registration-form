@@ -51,8 +51,6 @@ form {
   border-color: rgba(255, 255, 255, 0);
   width: 100%;
   border-radius: 15px;
-  
-  /* border: 0; */
 }
 
 
@@ -67,16 +65,25 @@ form {
   
 }
 
+
 .input-container {
   border: 0;
   padding: 0.25em 0.5em;
 }
 
-.input-group-container.radio-container { 
+.input-group-container.radio-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+.input-group-container.radio-container.column-flow {
+  flex-direction: column;
+}
+
+.input-group-container.radio-container.column-flow > .radio-box {
+  justify-content: start;
 }
 
 legend {
@@ -178,9 +185,12 @@ input[type="file"] {
 
 
 textarea {
-  height: 40em;
+  height: 15em;
 }
 
+textarea.larger-text-area {
+  height: 40em;
+}
 
 
 
