@@ -20,7 +20,7 @@
       <h1>Registration Form</h1>
 
       <!-- TODO: CREATE A RESULT PAGE -->
-      <form action="#" method="POST">
+      <form action="#" method="POST" enctype="multipart/form-data">
 
         <fieldset class="input-group-container">
           <legend>Full Name</legend>
@@ -133,6 +133,18 @@
             <span class="radio-label">Other</span>
           </label>
 
+        </fieldset>
+
+        <fieldset class="input-group-container wide-fieldset">
+          <legend>Resume</legend>
+
+          <div class="file-drop-box">
+            <label class="file-box-label">Choose a File to Upload<br>
+              <span>Drag or drop</span></label>
+            <input type="file" 
+              accept=".pdf, .txt, .doc, .docx, .docm, .dotx, .dot" multiple>
+          </div>
+          <label>Upload your Resume</label>
         </fieldset>
 
 
