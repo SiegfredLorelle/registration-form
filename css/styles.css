@@ -46,12 +46,17 @@ form {
 }
 
 
-.input-container {
-  margin: auto;
+fieldset.input-container {
+  /* margin: auto; */
+  border: 0;
+  padding: 0 0.5em;
 }
 
-fieldset {
+fieldset.input-group-container {
   padding: 1em;
+  display: grid;
+  grid-auto-flow: column;
+  /* border: 0; */
 }
 
 
@@ -60,7 +65,7 @@ input {
   width: 100%;
   font-size: var(--small-font-size);
   font-family: 'Saira Condensed', Arial ,sans-serif;
-  padding:  0.75em;
+  padding:  0.5em;
   border-radius: 10px;
 
 }
