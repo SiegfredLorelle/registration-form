@@ -112,6 +112,8 @@ label {
   justify-content: center;
   padding: 1em;
   border-radius: 10px;
+  cursor: pointer;
+
 }
 
 .radio-box:hover {
@@ -126,20 +128,26 @@ label {
 
 input[type="radio"] {
   width: 30px;
+
 }
 
 
 
 .file-drop-box {
   width: 100%;
-  /* max-width: 50%; */
   height: 10em;
   background-color: #ffffff;
-  /* height: 100%; */
   margin: auto;
   border-radius: 5px;
   display: grid;
   align-items: center;
+  border: 2px dashed;
+  border-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.file-drop-box:hover {
+  border-style: solid;
 }
 
 input[type="file"] {
@@ -147,9 +155,10 @@ input[type="file"] {
   display: block;
   width: 100%;
   height: 100%;
-  /* background: #c7afaf; */
   grid-column: 1;
   grid-row: 1;
+  cursor: pointer;
+
 
 }
 
