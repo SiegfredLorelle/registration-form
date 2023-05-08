@@ -60,12 +60,8 @@
           <legend>Contact Number</legend>
 
           <div class="input-container">
-            <input type="tel" pattern="+[0-9]" placeholder="+63" required>
-            <label>Country Code</label>
-          </div>
-          <div class="input-container">
-            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-            placeholder="945-160-5205" required>
+            <input type="tel" pattern="^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+            placeholder="+63 945 160 5205" required>
             <label>Mobile Number</label>
           </div>
 
