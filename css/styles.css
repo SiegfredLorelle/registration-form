@@ -28,14 +28,15 @@ h1 {
   font-size: var(--largest-font-size);
   padding: 0 1em 1em 1em;
   grid-column: span 2;
+  color: #D6D5A8;
 }
 
 main {
-  width: 100%;
-  /* min-height: 100vh; */
-  /* height: 100dvh; */
+  /* width: 100%; */
+  /* min-height: 100vh;
+  min-height: 100dvh; */
   max-width: 1024px;
-  background: rgb(104, 57, 65);
+  background: #51557E;
   margin: auto;
   padding: 2em;
 }
@@ -81,6 +82,8 @@ fieldset.input-group-container:hover {
 
 legend {
   padding: 0.25em;
+  color: #D6D5A8;
+
 }
 
 input {
