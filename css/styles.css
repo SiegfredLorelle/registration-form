@@ -52,7 +52,7 @@ form {
 .input-container {
   /* margin: auto; */
   border: 0;
-  padding: 0 0.5em;
+  padding: 0.25em 0.5em;
 }
 
 fieldset.input-group-container {
@@ -93,20 +93,15 @@ input {
 }
 
 div.wide-input {
-  /* background-color: red; */
   display: grid;
   grid-auto-flow: column;
   flex-direction: row;
-  /* padding:  0.5em; */
-
-  /* justify-content: center; */
 }
 
 label {
   font-size: var(--small-font-size);
+  margin-left: 1em;
 
-/* input[type="text"] {
-} */
 }
 input[type="submit"] {
   grid-column: span 2;
@@ -114,7 +109,6 @@ input[type="submit"] {
   margin: 0.25em auto;
   width: fit-content;
   display: block;
-  /* width: 100%; */
 }
 
 
@@ -128,13 +122,7 @@ input[type="submit"] {
 
 }
 
-
-
-
 @media (min-width: 1024px) {
-
-
-
   main {
     border-radius: 20px;
     margin: 3em auto;
