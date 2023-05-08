@@ -2,9 +2,9 @@
   --bg-clr: #1B2430;
   --font-clr: #ffffffef;
 
-  --small-font-size: calc(0.05em + 1vw);
-  --regular-font-size: calc(0.15em + 1vw);
-  --largest-font-size: calc(2em + 1vw);
+  --small-font-size: 0.75em;
+  --regular-font-size: 1em;
+  --largest-font-size: 2em;
 }
 
 *, *::before, *::after {
@@ -32,6 +32,8 @@ h1 {
 
 main {
   width: 100%;
+  /* min-height: 100vh; */
+  /* height: 100dvh; */
   max-width: 1024px;
   background: rgb(104, 57, 65);
   margin: auto;
@@ -39,10 +41,11 @@ main {
 }
 
 form {
-  display: grid;
+  /* display: grid; */
   gap: 2em;
-  grid-template-rows: 2fr;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-auto-flow: column; */
+  /* grid-template-rows: 1fr; */
+  /* grid-template-columns: repeat(2, 1fr); */
 }
 
 
@@ -57,6 +60,7 @@ fieldset.input-group-container {
   display: grid;
   grid-auto-flow: column;
   border-color: rgba(255, 255, 255, 0);
+  width: 100%;
 
   /* border: 0; */
 
@@ -95,14 +99,27 @@ input[type="submit"] {
   padding: 0.25em 1em;
   margin: 0.25em auto;
   width: fit-content;
+  display: block;
+  /* width: 100%; */
+}
+
+
+
+@media (min-width: 426px) {
+  form {
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 
 
 
-
-
 @media (min-width: 1024px) {
+
+
 
   main {
     border-radius: 20px;
