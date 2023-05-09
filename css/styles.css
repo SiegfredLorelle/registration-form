@@ -208,7 +208,7 @@ textarea {
 }
 
 textarea.larger-text-area {
-  height: 40em;
+  height: 30em;
 }
 
 
@@ -232,8 +232,6 @@ input[type="submit"] {
     grid-template-rows: 2fr;
     grid-template-columns: repeat(2, 1fr);
   }
-
-  
 }
 
 @media (min-width: 1024px) {
@@ -249,6 +247,5 @@ input[type="submit"] {
   .radio-box {
     justify-content: center;
   }
-
 }
 

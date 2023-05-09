@@ -30,7 +30,6 @@ radioBtns.forEach(btns => {
       textInputContainer = lastBtn.parentElement.nextElementSibling
       textInput = textInputContainer.firstElementChild.firstElementChild
       
-      // console.log(btn, lastBtn, textInput);  
       if (lastBtn.checked) {
         textInputContainer.classList.remove("hide");
         textInput.required = true;
@@ -40,32 +39,6 @@ radioBtns.forEach(btns => {
         textInput.required = false;
       }
     });
-    // Event listener here
-    // if (lastBtn.checked) {
-    //   lastBtn.parentE
-    // }
   })
 })
 
-// typeOfWorkRadioBtns.forEach(btn => {
-//   btn.addEventListener("change", () => {
-//     let last_btn = typeOfWorkRadioBtns[typeOfWorkRadioBtns.length - 1] 
-//     console.log(last_btn.checked);
-
-//     if (last_btn.checked) {
-//       last_btn.parentElement.nextElementSibling.classList.remove("hide");
-//     }
-//     else {
-//       last_btn.parentElement.nextElementSibling.classList.add("hide");
-
-//     }
-
-//     // console.log(btn.parentElement.nextElementSibling);
-//     // if (btn.checked) {
-//     // }
-//     // else {
-//     //   btn.parentElement.nextElementSibling.classList.add("hide");
-
-//     // }
-//   });
-// })

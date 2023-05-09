@@ -25,8 +25,9 @@
         <fieldset class="input-group-container">
           <legend>Full Name</legend>
           <div class="input-container">
-            <input type="text" autocomplete="off" name="first-name" required
-              placeholder="Siegfred Lorelle" title="Include 2nd or 3rd name">
+            <input type="text" autofocus autocomplete="off" name="first-name" 
+              placeholder="Siegfred Lorelle" title="Include 2nd or 3rd name"
+              required>
             <label>First Name</label>
           </div>
           <div class="input-container">
@@ -154,7 +155,7 @@
           <div class="file-drop-box">
             <label class="file-box-label">Choose a File to Upload<br>
               <span>Drag and drop</span></label>
-            <input type="file" name="resume-file" autocomplete="off" required
+            <input type="file" name="resume-file" required
               accept=".pdf, .txt, .doc, .docx, .docm, .dotx, .dot">
           </div>
           <label>Upload your Resume Here</label>
@@ -163,14 +164,16 @@
         <!-- Cover Letter & Additional Information -->
         <fieldset class="input-group-container wide-fieldset">
           <legend>Cover Letter</legend>
-            <textarea class="larger-text-area" placeholder="Type Here ..."></textarea>
+            <textarea class="larger-text-area" autocomplete="off"
+              name="cover-letter" placeholder="Type your cover letter here ..." 
+              minlength="100"></textarea>
         </fieldset>
 
         <!-- Veteran Status -->
         <fieldset class="input-group-container wide-fieldset radio-container">
           <legend>Veteran Status</legend>
           <label class="radio-box">
-            <input type="radio" name="veteran-status">
+            <input type="radio" name="veteran-status" required>
             <span class="radio-label">I am a veteran</span>
           </label>
           <label class="radio-box">
@@ -201,7 +204,7 @@
         radio-container has-another-option">
           <legend>Pronouns</legend>
           <label class="radio-box">
-            <input type="radio" name="pronouns">
+            <input type="radio" name="pronouns" required>
             <span class="radio-label">She/Her</span>
           </label>
           <label class="radio-box">
@@ -223,7 +226,8 @@
 
           <div class="break hide">
             <div class="input-container">
-              <input type="text" placeholder="Type Another Option Here ...">
+              <input type="text" name="pronouns" 
+                placeholder="Type Another Option Here ..." required>
             </div>
           </div>
         </fieldset>
@@ -233,7 +237,7 @@
         radio-container has-another-option column-flow">
           <legend>Disabilities</legend>
           <label class="radio-box">
-            <input type="radio" name="disability">
+            <input type="radio" name="disability" required>
             <span class="radio-label">I have no disability</span>
           </label>
           <label class="radio-box">
@@ -284,7 +288,8 @@
           </label>
           <div class="break hide">
             <div class="input-container">
-              <input type="text" placeholder="Type Another Option Here ...">
+              <input type="text" name="disability" 
+                placeholder="Type Another Option Here ..." required>
             </div>
           </div>
         </fieldset>
@@ -294,7 +299,7 @@
         radio-container has-another-option">
           <legend>Race</legend>
           <label class="radio-box">
-            <input type="radio" name="race">
+            <input type="radio" name="race" required>
             <span class="radio-label">American Native or Alaska Native</span>
           </label>
           <label class="radio-box">
@@ -325,7 +330,8 @@
           </label>
           <div class="break hide">
             <div class="input-container">
-              <input type="text" placeholder="Type Another Option Here ...">
+              <input type="text" name="race" 
+                placeholder="Type Another Option Here ..." required>
             </div>
           </div>
         </fieldset>
@@ -333,7 +339,8 @@
         <!-- Cover Letter & Additional Information -->
         <fieldset class="input-group-container wide-fieldset">
           <legend>Additional Notes</legend>
-            <textarea placeholder="Type Here ..."></textarea>
+            <textarea autocomplete="off" name="additional-notes" 
+            placeholder="Type Here ..."></textarea>
         </fieldset>
 
       <input type="submit">
