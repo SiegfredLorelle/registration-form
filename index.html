@@ -24,23 +24,24 @@
 
         <fieldset class="input-group-container">
           <legend>Full Name</legend>
-
           <div class="input-container">
-            <input type="text">
+            <input type="text" autocomplete="off" name="first-name" required
+              placeholder="Siegfred Lorelle" title="Include 2nd or 3rd name">
             <label>First Name</label>
           </div>
           <div class="input-container">
-            <input type="text">
+            <input type="text" autocomplete="off" name="last-name" required
+              placeholder="Mina" title="Include suffix">
             <label>Last Name</label>
           </div>
-
         </fieldset>
   
         <fieldset class="input-group-container">
           <legend>Date of Birth</legend>
 
           <div class="input-container">
-            <input type="date">
+            <input type="date" autocomplete="off" name="birthday" 
+              title="Follow format: month/day/year" required>
             <label>Date</label>
           </div>
 
@@ -48,9 +49,10 @@
 
         <fieldset class="input-group-container">
           <legend>Email</legend>
-
           <div class="input-container">
-            <input type="email">
+            <input type="email" autocomplete="off" name="email" required
+            placeholder="siegfredlorelle09@gmail.com" 
+            title="Use your primary email">
             <label>Email</label>
           </div>
 
@@ -60,9 +62,10 @@
           <legend>Contact Number</legend>
 
           <div class="input-container">
-            <input type="tel" 
-            pattern="^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
-            placeholder="+63 945 160 5205" required>
+            <input type="tel" autocomplete="off"
+              name="mobile-number" placeholder="+63 945 160 5205" 
+              title="Follow format: +<country code> <mobile number>" required
+              pattern="^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
             <label>Mobile Number</label>
           </div>
 
