@@ -51,7 +51,7 @@
           <legend>Email</legend>
           <div class="input-container">
             <input type="email" autocomplete="off" name="email" required
-            placeholder="siegfredlorelle09@gmail.com" 
+            placeholder="siegfredlorelle09@gmail.com"
             title="Use your primary email">
             <label>Email</label>
           </div>
@@ -75,33 +75,35 @@
           <legend>Address</legend>
 
           <div class="input-container">
-            <input type="text" 
-            placeholder="25 Oaks Avenue" required>
+            <input type="text" autocomplete="off" name="street-address" required
+              placeholder="25 Oaks Avenue" 
+              title="Include building number and street name">
             <label>Street Address</label>
           </div>
 
           <div class="input-container">
-            <input type="text" 
-            placeholder="Oaks Residences" required>
-            <label>Apartment / Unit / Building / Floor / etc.</label>
+            <input type="text" autocomplete="off" name="street-address-2"
+            placeholder="Oaks Residences">
+            <label>Apartment / Unit / Building / Floor / Village / etc.</label>
           </div>
 
           <div class="wide-input">
-
             <div class="input-container">
-              <input type="text" placeholder="Cainta" required>
-              <label>City</label>
+              <input type="text" autocomplete="off" name="city" 
+              placeholder="Cainta" required>
+              <label>City / Municipality</label>
             </div>
             <div class="input-container">
-              <input type="text" placeholder="Rizal" required>
+              <input type="text" autocomplete="off" name="state" 
+              placeholder="Rizal" required>
               <label>State / Province</label>
             </div>
 
           </div>
 
           <div class="input-container">
-
-            <input type="number" placeholder="1900" min=1000 required>
+            <input type="number" autocomplete="off" name="zip-code" 
+            placeholder="1900" min=100 required>
             <label>Postal / Zip Code</label>
           </div>
 
@@ -111,7 +113,8 @@
           <legend>Position</legend>
 
           <div class="input-container">
-            <input type="text">
+            <input type="text" autocomplete="off" name="position" 
+            placeholder="Student" title="None if not applicable" required>
             <label>Position</label>
           </div>
 
@@ -121,7 +124,7 @@
         radio-container has-another-option">
           <legend>Type of Work</legend>
           <label class="radio-box">
-            <input type="radio" name="work-type">
+            <input type="radio" name="work-type" required>
             <span class="radio-label">Permanent</span>
           </label>
           <label class="radio-box">
@@ -139,7 +142,8 @@
 
           <div class="break hide">
             <div class="input-container">
-              <input type="text" placeholder="Type Another Option Here ...">
+              <input type="text" name="work-type" 
+              placeholder="Type Another Option Here ..." required>
             </div>
           </div>
         </fieldset>
@@ -150,7 +154,7 @@
           <div class="file-drop-box">
             <label class="file-box-label">Choose a File to Upload<br>
               <span>Drag and drop</span></label>
-            <input type="file" 
+            <input type="file" name="resume-file" autocomplete="off" required
               accept=".pdf, .txt, .doc, .docx, .docm, .dotx, .dot">
           </div>
           <label>Upload your Resume Here</label>

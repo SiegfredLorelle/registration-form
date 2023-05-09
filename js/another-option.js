@@ -20,22 +20,24 @@ const radioBtns = [
 ]
 
 
-let lastBtn, textInput;
+let lastBtn, textInputContainer, textInput;
 
 radioBtns.forEach(btns => {
   
   btns.forEach(btn => {
     btn.addEventListener("change", () => {
       lastBtn = btns[btns.length - 1]
-      textInput = lastBtn.parentElement.nextElementSibling
+      textInputContainer = lastBtn.parentElement.nextElementSibling
+      textInput = textInputContainer.firstElementChild.firstElementChild
       
-      console.log(btn, lastBtn, textInput);
+      // console.log(btn, lastBtn, textInput);  
       if (lastBtn.checked) {
-        textInput.classList.remove("hide");
+        textInputContainer.classList.remove("hide");
+        textInput.required = true;
       }
       else {
-        textInput.classList.add("hide");
-
+        textInputContainer.classList.add("hide");
+        textInput.required = false;
       }
     });
     // Event listener here
