@@ -78,19 +78,6 @@ form {
   flex-wrap: wrap;
 }
 
-/* .radio-container.has-another-option 
-> label.radio-box:nth-last-child(2) > input:checked 
-+ * {
-  display: block;
-  background-color: blue;
-  color: pink
-} */
-
-/* .has-another-option > .radio-box > input['name=radio'] {
-
-} */
-
-
 .input-group-container.radio-container.column-flow {
   flex-direction: column;
 }
@@ -173,6 +160,11 @@ input[type="radio"] {
 }
 
 .file-drop-box:hover {
+  border-style: solid;
+}
+
+
+.file-drop-box.has-file {
   border-style: solid;
 }
 
