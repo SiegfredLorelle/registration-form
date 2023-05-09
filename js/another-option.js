@@ -4,11 +4,19 @@ const typeOfWorkRadioBtns = document.querySelectorAll(
 const pronounsRadioBtns = document.querySelectorAll(
   ".has-another-option > .radio-box > input[type='radio'][name='pronouns']"
 );
+const disabilityRadioBtns = document.querySelectorAll(
+  ".has-another-option > .radio-box > input[type='radio'][name='disability']"
+);
+const raceRadioBtns = document.querySelectorAll(
+  ".has-another-option > .radio-box > input[type='radio'][name='race']"
+);
 
 
 const radioBtns = [
   typeOfWorkRadioBtns,
-  pronounsRadioBtns
+  pronounsRadioBtns,
+  disabilityRadioBtns,
+  raceRadioBtns,
 ]
 
 
@@ -17,11 +25,11 @@ let lastBtn, textInput;
 radioBtns.forEach(btns => {
   
   btns.forEach(btn => {
-    // console.log(btn, lastBtn, textInput);
     btn.addEventListener("change", () => {
       lastBtn = btns[btns.length - 1]
       textInput = lastBtn.parentElement.nextElementSibling
-
+      
+      console.log(btn, lastBtn, textInput);
       if (lastBtn.checked) {
         textInput.classList.remove("hide");
       }
