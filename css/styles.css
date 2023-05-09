@@ -73,7 +73,7 @@ form {
 
 .input-group-container.radio-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
@@ -128,8 +128,7 @@ label {
 .radio-box {
   font-size: (var(--regular-font-size));
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: start;
   padding: 1em;
   border-radius: 10px;
   cursor: pointer;
@@ -227,19 +226,28 @@ input[type="submit"] {
 
 
 
-@media screen and (min-width: 426px) {
+@media (min-width: 426px) {
   form {
     display: grid;
     grid-template-rows: 2fr;
     grid-template-columns: repeat(2, 1fr);
   }
 
+  
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   main {
     border-radius: 20px;
     margin: 3em auto;
+  }
+  
+  fieldset.input-group-container.radio-container {
+    flex-direction: row;
+  }
+  
+  .radio-box {
+    justify-content: center;
   }
 
 }
