@@ -159,12 +159,8 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.file-drop-box.has-file,
 .file-drop-box:hover {
-  border-style: solid;
-}
-
-
-.file-drop-box.has-file {
   border-style: solid;
 }
 
