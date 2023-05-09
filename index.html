@@ -114,24 +114,31 @@
 
         </fieldset>
 
-        <fieldset class="input-group-container wide-fieldset radio-container">
+        <fieldset class="input-group-container wide-fieldset 
+        radio-container has-another-option">
           <legend>Type of Work</legend>
           <label class="radio-box">
-            <input type="radio" name="ADSD">
+            <input type="radio" name="work-type">
             <span class="radio-label">Permanent</span>
           </label>
           <label class="radio-box">
-            <input type="radio" name="ADSD">
+            <input type="radio" name="work-type">
             <span class="radio-label">Temporary</span>
           </label>
           <label class="radio-box">
-            <input type="radio" name="ADSD">
+            <input type="radio" name="work-type">
             <span class="radio-label">Both</span>
           </label>
           <label class="radio-box">
-            <input type="radio" name="ADSD">
+            <input type="radio" name="work-type">
             <span class="radio-label">Other</span>
           </label>
+
+          <div class="break hide">
+            <div class="input-container">
+              <input type="text" placeholder="Type Another Option Here ...">
+            </div>
+          </div>
         </fieldset>
 
         <fieldset class="input-group-container wide-fieldset">
@@ -311,6 +318,8 @@
 
 
     </main>
+
+    <script src="./js/another-option.js"></script>
   </body>
 
 

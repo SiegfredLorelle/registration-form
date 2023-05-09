@@ -78,6 +78,19 @@ form {
   flex-wrap: wrap;
 }
 
+/* .radio-container.has-another-option 
+> label.radio-box:nth-last-child(2) > input:checked 
++ * {
+  display: block;
+  background-color: blue;
+  color: pink
+} */
+
+/* .has-another-option > .radio-box > input['name=radio'] {
+
+} */
+
+
 .input-group-container.radio-container.column-flow {
   flex-direction: column;
 }
@@ -103,7 +116,6 @@ input, textarea {
 div.wide-input {
   display: grid;
   grid-auto-flow: column;
-  flex-direction: row;
 }
 
 label {
@@ -117,6 +129,7 @@ label {
   font-size: (var(--regular-font-size));
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 1em;
   border-radius: 10px;
   cursor: pointer;
@@ -135,9 +148,16 @@ label {
 
 input[type="radio"] {
   width: 30px;
-
 }
 
+
+.hide {
+  display: none;;
+}
+
+.break {
+  flex-basis: 100%;
+}
 
 
 .file-drop-box {
@@ -207,7 +227,7 @@ input[type="submit"] {
 
 
 
-@media (min-width: 426px) {
+@media screen and (min-width: 426px) {
   form {
     display: grid;
     grid-template-rows: 2fr;
@@ -216,7 +236,7 @@ input[type="submit"] {
 
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   main {
     border-radius: 20px;
     margin: 3em auto;
