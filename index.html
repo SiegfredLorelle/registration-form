@@ -20,103 +20,97 @@
       <h1>Registration Form</h1>
 
       <!-- TODO: CREATE A RESULT PAGE -->
-      <form action="" method="post" enctype="multipart/form-data">
+      <form method="post" enctype="multipart/form-data">
 
         <fieldset class="input-group-container">
           <legend>Full Name</legend>
           <div class="input-container">
             <input type="text" autofocus autocomplete="off" name="first-name" 
-              placeholder="Siegfred Lorelle" title="Include 2nd or 3rd name"
-              required>
-            <label>First Name</label>
+              id = "first-name" placeholder="Siegfred Lorelle" 
+              title="Include 2nd or 3rd name" required>
+            <label for="first-name">First Name</label>
           </div>
           <div class="input-container">
-            <input type="text" autocomplete="off" name="last-name" required
-              placeholder="Mina" title="Include suffix">
-            <label>Last Name</label>
+            <input type="text" autocomplete="off" name="last-name" 
+              id="last-name" required placeholder="Mina" title="Include suffix">
+            <label for="last-name">Last Name</label>
           </div>
         </fieldset>
   
         <fieldset class="input-group-container">
           <legend>Date of Birth</legend>
-
           <div class="input-container">
-            <input type="date" autocomplete="off" name="birthday" 
+            <input type="date" autocomplete="off" name="birthday" id="birthday"
               title="Follow format: month/day/year" required>
-            <label>Date</label>
+            <label for="birthday">Date</label>
           </div>
-
         </fieldset>
 
         <fieldset class="input-group-container">
           <legend>Email</legend>
           <div class="input-container">
-            <input type="email" autocomplete="off" name="email" required
-            placeholder="siegfredlorelle09@gmail.com"
-            title="Use your primary email">
-            <label>Email</label>
+            <input type="email" autocomplete="off" name="email" id="email" 
+              required placeholder="siegfredlorelle09@gmail.com"
+              title="Use your primary email">
+            <label for="email">Email</label>
           </div>
-
         </fieldset>
 
         <fieldset class="input-group-container">
           <legend>Contact Number</legend>
-
           <div class="input-container">
             <input type="tel" autocomplete="off"
-              name="mobile-number" placeholder="+63 945 160 5205" 
-              title="Follow format: +<country code> <mobile number>" required
+              name="mobile-number" id="mobile-number" 
+              placeholder="+63 945 160 5205" required
+              title="Follow format: +<country code> <mobile number>"
               pattern="^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
-            <label>Mobile Number</label>
+            <label for="mobile-number">Mobile Number</label>
           </div>
-
         </fieldset>
 
         <fieldset class="input-group-container wide-fieldset">
           <legend>Address</legend>
-
           <div class="input-container">
             <input type="text" autocomplete="off" name="street-address" required
-              placeholder="25 Oaks Avenue" 
+              id="street-address" placeholder="25 Oaks Avenue" 
               title="Include building number and street name">
-            <label>Street Address</label>
+            <label for="street-address">Street Address</label>
           </div>
 
           <div class="input-container">
             <input type="text" autocomplete="off" name="street-address-2"
-            placeholder="Oaks Residences">
-            <label>Apartment / Unit / Building / Floor / Village / etc.</label>
+            id="street-address-2" placeholder="Oaks Residences" required>
+            <label for="street-address-2">
+              Apartment / Unit / Building / Floor / Village / etc.
+            </label>
           </div>
 
           <div class="wide-input">
             <div class="input-container">
-              <input type="text" autocomplete="off" name="city" 
+              <input type="text" autocomplete="off" name="city" id="city"
               placeholder="Cainta" required>
-              <label>City / Municipality</label>
+              <label for="city">City / Municipality</label>
             </div>
             <div class="input-container">
-              <input type="text" autocomplete="off" name="state" 
+              <input type="text" autocomplete="off" name="state" id="state"
               placeholder="Rizal" required>
-              <label>State / Province</label>
+              <label for="state">State / Province</label>
             </div>
-
           </div>
 
           <div class="input-container">
             <input type="number" autocomplete="off" name="zip-code" 
-            placeholder="1900" min=100 required>
-            <label>Postal / Zip Code</label>
+            id="zip-code" placeholder="1900" min=100 required>
+            <label for="zip-code">Postal / Zip Code</label>
           </div>
-
         </fieldset>
 
         <fieldset class="input-group-container wide-fieldset">
           <legend>Position</legend>
 
           <div class="input-container">
-            <input type="text" autocomplete="off" name="position" 
+            <input type="text" autocomplete="off" name="position" id="position"
             placeholder="Student" title="None if not applicable" required>
-            <label>Position</label>
           </div>
 
         </fieldset>
@@ -153,9 +147,11 @@
           <legend>Resume</legend>
 
           <div class="file-drop-box">
-            <label class="file-box-label">Choose a File to Upload<br>
-              <span>Drag and drop</span></label>
-            <input type="file" name="resume-file" required
+            <label class="file-box-label" for="resume-file">
+              Choose a File to Upload<br>
+              <span>Drag and drop</span>
+            </label>
+            <input type="file" name="resume-file" id="resume-file" required
               accept=".pdf, .txt, .doc, .docx, .docm, .dotx, .dot">
           </div>
           <label>Upload your Resume Here</label>
@@ -343,6 +339,11 @@
             placeholder="Type Here ..."></textarea>
         </fieldset>
 
+
+
+
+
+        
       <input type="submit">
       </form>
 
