@@ -63,6 +63,8 @@ form {
 .input-group-container.selected {
   background-color: #696ea4;
   border-color: revert;
+  /* border-color: red; */
+
   
 }
 
@@ -99,11 +101,21 @@ input, textarea {
   font-family: 'Saira Condensed', Arial ,sans-serif;
   padding:  0.5em;
   border-radius: 5px;
+  border: none;
 }
 
 input:focus-visible, textarea:focus-visible {
   outline: none;
 }
+
+input.error, textarea.error {
+  box-shadow: 0px 5px #ff2b40;
+}
+
+label.error {
+  color: #ff2b40;
+}
+
 
 div.wide-input {
   display: grid;
@@ -114,6 +126,7 @@ label {
   font-size: var(--small-font-size);
   margin-left: 1em;
   display: block;
+  padding-top: 0.5em;
 }
 
 
