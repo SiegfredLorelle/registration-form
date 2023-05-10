@@ -11,11 +11,14 @@ const state = document.querySelector("#state");
 const zipCode = document.querySelector("#zip-code");
 
 const position = document.querySelector("#position");
+const coverLetter = document.querySelector("#cover-letter");
 
 const workType = document.querySelector("input[type='text'][name='work-type']");
 const pronoun = document.querySelector("input[type='text'][name='pronouns']");
 const disability = document.querySelector("input[type='text'][name='disability']");
 const race = document.querySelector("input[type='text'][name='race']");
+
+
 
 console.log(workType, pronoun, disability, race);
 
@@ -88,6 +91,14 @@ events.forEach(event => {
 events.forEach(event => {
   zipCode.addEventListener(event, () => {
     zipCheck(zipCode);
+  })
+})
+
+/* Stricter validation for cover letter */
+
+events.forEach(event => {
+  coverLetter.addEventListener(event, () => {
+    coverLetterCheck(coverLetter);
   })
 })
 
@@ -172,3 +183,26 @@ function zipCheck(zipCode) {
   }
 }
 
+
+
+function coverLetterCheck(coverLetter) {
+  let label = coverLetter.nextElementSibling
+  
+  numOfChars = coverLetter.value.length
+  if (!coverLetter.value) {
+    coverLetter.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "Must not be empty";
+  }
+  else if (numOfChars < 100) {
+    coverLetter.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = `Must at least be 100 characters \ 
+    (currently at ${numOfChars})`;
+  }
+  else {
+    coverLetter.classList.remove("error");
+    label.innerHTML = "Cover Letter";
+    label.classList.remove("error");
+  }
+}
