@@ -59,7 +59,8 @@ form {
   grid-auto-flow: row;
 }
 
-.input-group-container:hover {
+.input-group-container:hover,
+.input-group-container.selected {
   background-color: #696ea4;
   border-color: revert;
   
