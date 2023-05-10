@@ -2,10 +2,15 @@ const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const birthday = document.querySelector("#birthday");
 const email = document.querySelector("#email");
+const contactNum = document.querySelector("#mobile-number");
 
 
+events = [
+  "focus",
+  "input",
+]
 
-["focus", "input"].forEach(event => {
+events.forEach(event => {
   firstName.addEventListener(event, () => {
     nameCheck(firstName);
   });
@@ -15,17 +20,24 @@ const email = document.querySelector("#email");
 });
 
 
-["focus", "input"].forEach(event => {
+events.forEach(event => {
   birthday.addEventListener(event, () => {
     birthdayCheck(birthday);
   });
 });
 
-["focus", "input"].forEach(event => {
+events.forEach(event => {
   email.addEventListener(event, () => {
     emailCheck(email);
   });
 });
+
+events.forEach(event => {
+  contactNum.addEventListener(event, () => {
+    contactNumCheck(contactNum);
+  })
+})
+
 
 function nameCheck(name) {
   console.log(name);
@@ -69,6 +81,24 @@ function emailCheck(email) {
   else {
     email.classList.remove("error");
     label.innerHTML = "Email";
+    label.classList.remove("error");
+  }
+}
+
+function contactNumCheck(contactNum) {
+  let label = contactNum.nextElementSibling
+  let regexForNum = /^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
+  console.log(contactNum.value);
+  console.log(regexForNum.test(contactNum.value));
+  let isValid = regexForNum.test(contactNum.value);
+  if (!isValid) {
+    contactNum.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "Follow similar format: +63 945 160 5205";
+  }
+  else {
+    contactNum.classList.remove("error");
+    label.innerHTML = "Mobile Number";
     label.classList.remove("error");
   }
 }
