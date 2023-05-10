@@ -10,6 +10,8 @@ const city = document.querySelector("#city");
 const state = document.querySelector("#state");
 const zipCode = document.querySelector("#zip-code");
 
+const postiont = document.querySelector("#position");
+
 
 events = [
   "focus",
@@ -64,6 +66,11 @@ events.forEach(event => {
   })
 })
 
+events.forEach(event => {
+  position.addEventListener(event, () => {
+    generalCheck(position);
+  })
+})
 
 
 
@@ -146,7 +153,7 @@ function zipCheck(zipCode) {
   }
   else {
     zipCode.classList.remove("error");
-    label.innerHTML = "Mobile Number";
+    label.innerHTML = "Postal / Zip Code";
     label.classList.remove("error");
   }
 }
