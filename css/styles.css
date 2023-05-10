@@ -1,6 +1,13 @@
 :root {
   --bg-clr: #1B2430;
-  --font-clr: #ffffffef;
+  --contrast-clr: #D6D5A8;
+  --contrast-higlight-clr: #D6D5A8ef;
+  --secondary-clr: #51557E;
+  --highlight-clr: #696ea4;
+  --lighter-highlight-clr : #8187ca;
+  --font-clr: #ffffffff;
+  --transparent-clr: #ffffff00;
+  --warning-clr: #ff5465;
 
   --small-font-size: 0.75em;
   --regular-font-size: 1em;
@@ -21,6 +28,7 @@ body {
   font-family: 'Ubuntu', Arial ,sans-serif;
   font-size: var(--regular-font-size);
   scroll-behavior: smooth;
+  background-image: linear-gradient(180deg, var(--bg-clr), var(--contrast-clr));
 }
 
 
@@ -29,12 +37,12 @@ h1 {
   font-size: var(--largest-font-size);
   padding: 0 1em 1em 1em;
   grid-column: span 2;
-  color: #D6D5A8;
+  color: var(--contrast-clr);
 }
 
 main {
   max-width: 1024px;
-  background: #51557E;
+  background: var(--secondary-clr);
   margin: auto;
   padding: 2em;
 }
@@ -49,9 +57,10 @@ form {
   padding: 1em;
   display: grid;
   grid-auto-flow: column;
-  border-color: rgba(255, 255, 255, 0);
+  border-color: var(--transparent-clr);
   width: 100%;
   border-radius: 15px;
+  transition: border-color 150ms ease-in-out;
 }
 
 
@@ -62,11 +71,9 @@ form {
 
 .input-group-container:hover,
 .input-group-container.selected {
-  background-color: #696ea4;
+  background-color: var(--highlight-clr);
   border-color: revert;
-  /* border-color: red; */
-
-  
+  transition: background-color 150ms ease-in-out;
 }
 
 
@@ -92,7 +99,7 @@ form {
 
 legend {
   padding: 0.25em;
-  color: #D6D5A8;
+  color: var(--contrast-clr);
   
 }
 
@@ -110,11 +117,11 @@ input:not([type="submit"]):focus-visible, textarea:focus-visible {
 }
 
 input.error, textarea.error, .file-drop-box.error {
-  box-shadow: 0px 5px #ff5465;
+  box-shadow: 0px 5px var(--warning-clr);
 }
 
 label.error {
-  color: #ff5465;
+  color: var(--warning-clr);
 }
 
 
@@ -138,11 +145,11 @@ label {
   padding: 1em;
   border-radius: 10px;
   cursor: pointer;
-
+  transition: background-color 150ms ease-in-out;
 }
 
 .radio-box:hover {
-  background-color: #8187ca;
+  background-color: var(--lighter-highlight-clr);
 }
 
 .radio-label {
@@ -153,7 +160,7 @@ label {
 
 input[type="radio"] {
   width: 20px;
-  accent-color: #D6D5A8;
+  accent-color: var(--contrast-clr);
 }
 
 .hide {
@@ -168,7 +175,7 @@ input[type="radio"] {
 .file-drop-box {
   width: 100%;
   height: 10em;
-  background-color: #ffffff;
+  background-color: var(--font-clr);
   margin: auto;
   border-radius: 5px;
   display: grid;
@@ -239,6 +246,7 @@ textarea.larger-text-area {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: background-color 150ms ease-in-out;
 
 }
 .control-btns-container > button > i {
@@ -246,15 +254,15 @@ textarea.larger-text-area {
 }
 
 .control-btns-container > button:hover {
-  background-color: #8187ca;
+  background-color: var(--highlight-clr);
 }
 
 .control-btns-container > input[type="submit"] {
-  background-color: #D6D5A8;
+  background-color: var(--contrast-clr);
   cursor: pointer;
 }
   .control-btns-container > input[type="submit"]:hover {
-    background-color: #D6D5A8ed;
+    background-color: var(--contrast-higlight-clr);
   }
 
 
