@@ -7,7 +7,7 @@ firstName.addEventListener("input", () => {
   if (!firstName.value) {
     firstName.classList.add("error");
     label.classList.add("error");
-    label.innerHTML = "First Name must not be empty.";
+    label.innerHTML = "First Name must not be empty";
   }
   else {
     firstName.classList.remove("error");
