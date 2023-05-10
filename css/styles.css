@@ -1,7 +1,8 @@
 :root {
   --bg-clr: #1B2430;
+  --secondary-bg-clr: #373a57;
   --contrast-clr: #D6D5A8;
-  --contrast-higlight-clr: #D6D5A8ef;
+  --contrast-highlight-clr: #D6D5A8ef;
   --secondary-clr: #51557E;
   --highlight-clr: #696ea4;
   --lighter-highlight-clr : #8187ca;
@@ -20,7 +21,6 @@
   padding: 0;
 }
 
-
 html,
 body {
   background-color: var(--bg-clr);
@@ -28,7 +28,7 @@ body {
   font-family: 'Ubuntu', Arial ,sans-serif;
   font-size: var(--regular-font-size);
   scroll-behavior: smooth;
-  background-image: linear-gradient(180deg, var(--bg-clr), var(--contrast-clr));
+  background-image: linear-gradient(180deg, var(--secondary-bg-clr), var(--bg-clr));
 }
 
 
@@ -262,7 +262,7 @@ textarea.larger-text-area {
   cursor: pointer;
 }
   .control-btns-container > input[type="submit"]:hover {
-    background-color: var(--contrast-higlight-clr);
+    background-color: var(--contrast-highlight-clr);
   }
 
 
@@ -291,4 +291,3 @@ textarea.larger-text-area {
     justify-content: center;
   }
 }
-
