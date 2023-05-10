@@ -108,7 +108,7 @@ input:focus-visible, textarea:focus-visible {
   outline: none;
 }
 
-input.error, textarea.error {
+input.error, textarea.error, .file-drop-box.error {
   box-shadow: 0px 5px #ff5465;
 }
 

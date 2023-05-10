@@ -12,6 +12,7 @@ const zipCode = document.querySelector("#zip-code");
 
 const position = document.querySelector("#position");
 const coverLetter = document.querySelector("#cover-letter");
+const resume = document.querySelector("#resume-file");
 
 const workType = document.querySelector("input[type='text'][name='work-type']");
 const pronoun = document.querySelector("input[type='text'][name='pronouns']");
@@ -20,7 +21,6 @@ const race = document.querySelector("input[type='text'][name='race']");
 
 
 
-console.log(workType, pronoun, disability, race);
 
 events = [
   "focus",
@@ -95,10 +95,16 @@ events.forEach(event => {
 })
 
 /* Stricter validation for cover letter */
-
 events.forEach(event => {
   coverLetter.addEventListener(event, () => {
     coverLetterCheck(coverLetter);
+  })
+})
+
+/* Stricter validation for resume */
+events.forEach(event => {
+  resume.addEventListener(event, () => {
+    resumeCheck(resume);
   })
 })
 
@@ -203,6 +209,24 @@ function coverLetterCheck(coverLetter) {
   else {
     coverLetter.classList.remove("error");
     label.innerHTML = "Cover Letter";
+    label.classList.remove("error");
+  }
+}
+
+function resumeCheck(resume) {
+  let container = resume.parentElement;
+  let label = resume.closest("fieldset").querySelector("fieldset > label");
+  let validExtensions = ["pdf", "txt", "doc", "docx", "docm", "dotx", "dot"]
+  
+  if (!resume.files.length || !validExtensions.includes(resume.files[0].name.split('.').pop())) {
+    container.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "File extension must be .pdf, .txt, .doc, or .docx";
+  }
+
+  else {
+    container.classList.remove("error");
+    label.innerHTML = "Resume";
     label.classList.remove("error");
   }
 }
