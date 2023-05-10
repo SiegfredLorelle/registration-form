@@ -14,18 +14,10 @@ const position = document.querySelector("#position");
 const coverLetter = document.querySelector("#cover-letter");
 const resume = document.querySelector("#resume-file");
 
-// const workType = document.querySelector("input[type='text'][name='work-type']");
-// const pronoun = document.querySelector("input[type='text'][name='pronouns']");
-// const disability = document.querySelector("input[type='text'][name='disability']");
-// const race = document.querySelector("input[type='text'][name='race']");
-
 const submitBtn = document.querySelector(".control-btns-container > input[type='submit']");
 
 
 let validities = {}
-
-
-
 
 
 events = [
@@ -103,6 +95,7 @@ events.forEach(event => {
 })
 
 
+/* Checks if input is empty */
 function generalCheck(input) {
   let label = input.nextElementSibling
   if (!input.value) {
@@ -121,6 +114,7 @@ function generalCheck(input) {
   }
 }
 
+/* Ensures birthday is valid */
 function birthdayCheck(date) {
   let label = date.nextElementSibling
   let currentDate = new Date();
@@ -170,6 +164,7 @@ function birthdayCheck(date) {
   }
 }
 
+/* Ensures email is valid */
 function emailCheck(email) {
   let label = email.nextElementSibling
   let isValid = email.value.includes("@") && email.value.includes(".")
@@ -190,6 +185,7 @@ function emailCheck(email) {
   }
 }
 
+/* Ensures contact number is valid */
 function contactNumCheck(contactNum) {
   let label = contactNum.nextElementSibling
   let regexForNum = /^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
@@ -212,6 +208,7 @@ function contactNumCheck(contactNum) {
   }
 }
 
+/* Ensures zip code is valid */
 function zipCheck(zipCode) {
   let label = zipCode.nextElementSibling
   
@@ -239,7 +236,7 @@ function zipCheck(zipCode) {
 }
 
 
-
+/* Ensures cover letter's is has enough characters */
 function coverLetterCheck(coverLetter) {
   let label = coverLetter.nextElementSibling
   
@@ -267,6 +264,7 @@ function coverLetterCheck(coverLetter) {
   }
 }
 
+/* Ensures resume's file extension is valid */
 function resumeCheck(resume) {
   let container = resume.parentElement;
   let label = resume.closest("fieldset").querySelector("fieldset > label");
@@ -290,7 +288,6 @@ function resumeCheck(resume) {
 }
 
 
-
 const generalInputs = [
   firstName, 
   lastName, 
@@ -300,10 +297,11 @@ const generalInputs = [
   state, 
   position, 
 ]
+
+
 submitBtn.addEventListener("click", checkAllInputs);
 
 function checkAllInputs() {
-
   // Check all general inputs
   generalInputs.forEach(input => {
     generalCheck(input);
@@ -317,6 +315,7 @@ function checkAllInputs() {
   coverLetterCheck(coverLetter);
   resumeCheck(resume);
   
+  // Count the number of valid inputs
   let i = 0;
   for (key of Object.keys(validities)) {
     if (!validities[key]) {
@@ -325,6 +324,7 @@ function checkAllInputs() {
     i++;
   }
 
+  // Show result if all inputs are valid
   if (i == Object.keys(validities).length) {
     showResult();
   }
@@ -332,6 +332,8 @@ function checkAllInputs() {
 }
 
 
+
+/* Show the results of the form via alert */
 function showResult() {
   let typeOfWorkVal = document.querySelector("input[name='work-type']:checked");
   let veteranStatusVal = document.querySelector("input[name='veteran-status']:checked");
