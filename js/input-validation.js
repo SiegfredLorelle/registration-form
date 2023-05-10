@@ -1,14 +1,22 @@
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
+const birthday = document.querySelector("#birthday");
 
-
-// console.log(firstName);
 
 firstName.addEventListener("input", () => {
   nameCheck(firstName);
 });
 lastName.addEventListener("input", () => {
   nameCheck(lastName);
+});
+
+
+
+
+["focus", "input"].forEach(event => {
+  birthday.addEventListener(event, () => {
+    birthdayCheck(birthday);
+  });
 });
 
 
@@ -21,6 +29,20 @@ function nameCheck(name) {
   }
   else {
     name.classList.remove("error");
+    label.innerHTML = "First Name";
+    label.classList.remove("error");
+  }
+}
+
+function birthdayCheck(date) {
+  let label = date.nextElementSibling
+  if (!date.value) {
+    date.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "First date must not be empty";
+  }
+  else {
+    date.classList.remove("error");
     label.innerHTML = "First Name";
     label.classList.remove("error");
   }
