@@ -7,6 +7,7 @@ clearBtn.addEventListener("click", () => {
   if (window.confirm("Are you sure to clear the form?")) {
     form.reset();
     goBackTop() ;
+    updateDropBox();
   }
 });
 

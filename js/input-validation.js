@@ -299,8 +299,6 @@ const generalInputs = [
 ]
 
 
-submitBtn.addEventListener("click", checkAllInputs);
-
 function checkAllInputs() {
   // Check all general inputs
   generalInputs.forEach(input => {
