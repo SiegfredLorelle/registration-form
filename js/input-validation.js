@@ -4,6 +4,12 @@ const birthday = document.querySelector("#birthday");
 const email = document.querySelector("#email");
 const contactNum = document.querySelector("#mobile-number");
 
+const street = document.querySelector("#street-address");
+const street2 = document.querySelector("#street-address-2");
+const city = document.querySelector("#city");
+const state = document.querySelector("#state");
+const zipCode = document.querySelector("#zip-code");
+
 
 events = [
   "focus",
@@ -12,13 +18,12 @@ events = [
 
 events.forEach(event => {
   firstName.addEventListener(event, () => {
-    nameCheck(firstName);
+    generalCheck(firstName);
   });
   lastName.addEventListener(event, () => {
-    nameCheck(lastName);
+    generalCheck(lastName);
   });
 });
-
 
 events.forEach(event => {
   birthday.addEventListener(event, () => {
@@ -38,8 +43,32 @@ events.forEach(event => {
   })
 })
 
+events.forEach(event => {
+  street.addEventListener(event, () => {
+    generalCheck(street);
+  })
+  street2.addEventListener(event, () => {
+    generalCheck(street2);
+  })
+  city.addEventListener(event, () => {
+    generalCheck(city);
+  })
+  state.addEventListener(event, () => {
+    generalCheck(state);
+  })
+})
 
-function nameCheck(name) {
+events.forEach(event => {
+  zipCode.addEventListener(event, () => {
+    zipCheck(zipCode);
+  })
+})
+
+
+
+
+
+function generalCheck(name) {
   console.log(name);
 
   let label = name.nextElementSibling
@@ -88,9 +117,8 @@ function emailCheck(email) {
 function contactNumCheck(contactNum) {
   let label = contactNum.nextElementSibling
   let regexForNum = /^(\+\d{1,2}?[\s.-])?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
-  console.log(contactNum.value);
-  console.log(regexForNum.test(contactNum.value));
   let isValid = regexForNum.test(contactNum.value);
+
   if (!isValid) {
     contactNum.classList.add("error");
     label.classList.add("error");
@@ -98,6 +126,26 @@ function contactNumCheck(contactNum) {
   }
   else {
     contactNum.classList.remove("error");
+    label.innerHTML = "Mobile Number";
+    label.classList.remove("error");
+  }
+}
+
+function zipCheck(zipCode) {
+  let label = zipCode.nextElementSibling
+  
+  if (!zipCode.value || zipCode.value % 1 != 0) {
+    zipCode.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "Must only contain digits";
+  }
+  else if (zipCode.value < 100) {
+    zipCode.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "Must be at least 3 digits";
+  }
+  else {
+    zipCode.classList.remove("error");
     label.innerHTML = "Mobile Number";
     label.classList.remove("error");
   }

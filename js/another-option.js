@@ -30,7 +30,7 @@ radioBtns.forEach(btns => {
       textInputContainer = lastBtn.parentElement.nextElementSibling
       textInput = textInputContainer.firstElementChild.firstElementChild
       
-      if (lastBtn.checked) {
+li      if (lastBtn.checked) {
         textInputContainer.classList.remove("hide");
         textInput.required = true;
       }
