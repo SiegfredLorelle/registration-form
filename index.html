@@ -22,6 +22,7 @@
       <!-- TODO: CREATE A RESULT PAGE -->
       <form method="post" enctype="multipart/form-data">
 
+        <!-- Full Name -->
         <fieldset class="input-group-container">
           <legend>Full Name</legend>
           <div class="input-container">
@@ -37,6 +38,7 @@
           </div>
         </fieldset>
   
+        <!-- Date of Birth -->
         <fieldset class="input-group-container">
           <legend>Date of Birth</legend>
           <div class="input-container">
@@ -46,6 +48,7 @@
           </div>
         </fieldset>
 
+        <!-- Email -->
         <fieldset class="input-group-container">
           <legend>Email</legend>
           <div class="input-container">
@@ -56,6 +59,7 @@
           </div>
         </fieldset>
 
+        <!-- Contact Number -->
         <fieldset class="input-group-container">
           <legend>Contact Number</legend>
           <div class="input-container">
@@ -68,6 +72,7 @@
           </div>
         </fieldset>
 
+        <!-- Address -->
         <fieldset class="input-group-container wide-fieldset">
           <legend>Address</legend>
           <div class="input-container">
@@ -76,7 +81,6 @@
               title="Include building number and street name">
             <label for="street-address">Street Address</label>
           </div>
-
           <div class="input-container">
             <input type="text" autocomplete="off" name="street-address-2"
             id="street-address-2" required
@@ -85,7 +89,6 @@
               Apartment / Unit / Building / Floor / Village / etc.
             </label>
           </div>
-
           <div class="wide-input">
             <div class="input-container">
               <input type="text" autocomplete="off" name="city" id="city"
@@ -98,7 +101,6 @@
               <label for="state">State / Province</label>
             </div>
           </div>
-
           <div class="input-container">
             <input type="number" autocomplete="off" name="zip-code" 
             id="zip-code" placeholder="1900" min=100 required>
@@ -106,6 +108,7 @@
           </div>
         </fieldset>
 
+        <!-- Position -->
         <fieldset class="input-group-container wide-fieldset">
           <legend>Position</legend>
           <div class="input-container">
@@ -115,6 +118,7 @@
           </div>
         </fieldset>
 
+        <!-- Type of Work -->
         <fieldset class="input-group-container wide-fieldset 
         radio-container has-another-option">
           <legend>Type of Work</legend>
@@ -148,9 +152,9 @@
           </div>
         </fieldset>
 
+        <!-- Resume -->
         <fieldset class="input-group-container wide-fieldset">
           <legend>Resume</legend>
-
           <div class="file-drop-box">
             <input type="file" name="resume-file" id="resume-file" required
             accept=".pdf, .txt, .doc, .docx, .docm, .dotx, .dot">
@@ -160,7 +164,7 @@
           <label>Upload your Resume Here</label>
         </fieldset>
 
-        <!-- Cover Letter & Additional Information -->
+        <!-- Cover Letter -->
         <fieldset class="input-group-container wide-fieldset">
           <legend>Cover Letter</legend>
             <textarea class="larger-text-area" autocomplete="off"
@@ -168,6 +172,7 @@
               placeholder="Type Cover Letter Here ..."></textarea>
             <label for="cover-letter">Conver Letter</label>
         </fieldset>
+
         <!-- Veteran Status -->
         <fieldset class="input-group-container wide-fieldset radio-container">
           <legend>Veteran Status</legend>
@@ -222,7 +227,6 @@
             <input type="radio" name="pronouns">
             <span class="radio-label">Not listed</span>
           </label>
-
           <div class="break hide">
             <div class="input-container">
               <input type="text" name="pronouns" id="other-pronouns" 
@@ -332,14 +336,13 @@
           <div class="break hide">
             <div class="input-container">
               <input type="text" name="race" id="other-race"
-                placeholder="Type Another Option Here ..." required>
+                placeholder="Race" required>
                 <label for="other-race">Race</label>
-
             </div>
           </div>
         </fieldset>
 
-        <!-- Cover Letter & Additional Information -->
+        <!-- Additional Notes -->
         <fieldset class="input-group-container wide-fieldset">
           <legend>Additional Notes</legend>
             <textarea autocomplete="off" name="additional-notes" 
