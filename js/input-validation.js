@@ -125,10 +125,35 @@ function generalCheck(name) {
 
 function birthdayCheck(date) {
   let label = date.nextElementSibling
+  let currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
+  let givenYear = date.value.split("-")[0];
+  let minValidAge = 4;
+  let maxValidAge = 150;
+  let minValidYear = currentYear - maxValidAge
+  let maxValidYear = currentYear - minValidAge
+
   if (!date.value) {
     date.classList.add("error");
     label.classList.add("error");
     label.innerHTML = "Follow mm/dd/yyyy format";
+  }
+  else if (givenYear > currentYear) {
+    date.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "Invalid year";
+
+  }
+  else if (givenYear > maxValidYear) {
+    date.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "Sorry you are too young";
+
+  }
+  else if (givenYear < minValidYear) {
+    date.classList.add("error");
+    label.classList.add("error");
+    label.innerHTML = "Sorry you are too old";
   }
   else {
     date.classList.remove("error");
@@ -218,7 +243,8 @@ function resumeCheck(resume) {
   let label = resume.closest("fieldset").querySelector("fieldset > label");
   let validExtensions = ["pdf", "txt", "doc", "docx", "docm", "dotx", "dot"]
   
-  if (!resume.files.length || !validExtensions.includes(resume.files[0].name.split('.').pop())) {
+  if (!resume.files.length 
+    || !validExtensions.includes(resume.files[0].name.split('.').pop())) {
     container.classList.add("error");
     label.classList.add("error");
     label.innerHTML = "File extension must be .pdf, .txt, .doc, or .docx";
