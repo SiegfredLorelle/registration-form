@@ -19,7 +19,7 @@
 
   <body>
     <main>
-      <h1>Registration Form</h1>
+      <h1 id="title">Registration Form</h1>
 
       <!-- TODO: CREATE A RESULT PAGE -->
       <form method="post" enctype="multipart/form-data">
@@ -353,15 +353,20 @@
 
 
         <div class="control-btns-container">
-          <button><i class="fa-solid fa-arrow-rotate-left"></i>Clear</button>
-          <button type="submit">Submit</button>
-          <button><i class="fa-solid fa-arrow-up"></i>Back Top</button>
+          <button type="button">
+            <i class="fa-solid fa-arrow-rotate-left"></i>Clear
+          </button>
+          <input type="submit"></input>
+          <button type="button">
+            <i class="fa-solid fa-arrow-up"></i>Back Top
+          </button>
         </div>
       </form>
 
 
     </main>
 
+    <script src="./js/controls.js"></script>
     <script src="./js/input-validation.js"></script>
     <script src="./js/textfield-highlight.js"></script>
     <script src="./js/another-option.js"></script>
