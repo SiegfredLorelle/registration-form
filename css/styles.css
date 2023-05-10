@@ -151,9 +151,9 @@ label {
 
 
 input[type="radio"] {
-  width: 30px;
+  width: 20px;
+  accent-color: #D6D5A8;
 }
-
 
 .hide {
   display: none;;

@@ -10,7 +10,11 @@ const city = document.querySelector("#city");
 const state = document.querySelector("#state");
 const zipCode = document.querySelector("#zip-code");
 
-const postiont = document.querySelector("#position");
+const position = document.querySelector("#position");
+
+// const workType = document.querySelectorAll(
+//   "input[type='radio'][name='work-type']"
+// );
 
 
 events = [
@@ -71,9 +75,6 @@ events.forEach(event => {
     generalCheck(position);
   })
 })
-
-
-
 
 function generalCheck(name) {
   console.log(name);
