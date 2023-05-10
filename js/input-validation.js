@@ -19,6 +19,11 @@ const pronoun = document.querySelector("input[type='text'][name='pronouns']");
 const disability = document.querySelector("input[type='text'][name='disability']");
 const race = document.querySelector("input[type='text'][name='race']");
 
+const submitBtn = document.querySelector(".control-btns-container > input[type='submit']");
+
+
+
+
 
 
 
@@ -255,4 +260,38 @@ function resumeCheck(resume) {
     label.innerHTML = "Resume";
     label.classList.remove("error");
   }
+}
+
+
+
+const generalInputs = [
+  firstName, 
+  lastName, 
+  street, 
+  street2, 
+  city, 
+  state, 
+  position, 
+  workType, 
+  pronoun, 
+  disability, 
+  race
+]
+submitBtn.addEventListener("click", checkAllInputs);
+
+function checkAllInputs() {
+
+  // Check all general inputs
+  generalInputs.forEach(input => {
+    generalCheck(input);
+  });
+
+  // Check all stricter inputs
+  birthdayCheck(birthday);
+  emailCheck(email);
+  contactNumCheck(contactNum);
+  zipCheck(zipCode);
+  coverLetterCheck(coverLetter);
+  resumeCheck(resume);
+
 }

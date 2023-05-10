@@ -100,12 +100,12 @@ input, textarea {
   width: 100%;
   font-size: var(--regular-font-size);
   font-family: 'Ubuntu', Arial ,sans-serif;
-  padding:  0.5em;
+  padding: 0.5em;
   border-radius: 5px;
   border: none;
 }
 
-input:focus-visible, textarea:focus-visible {
+input:not([type="submit"]):focus-visible, textarea:focus-visible {
   outline: none;
 }
 
@@ -251,7 +251,6 @@ textarea.larger-text-area {
 
 .control-btns-container > input[type="submit"] {
   background-color: #D6D5A8;
-  color: black;
   cursor: pointer;
 }
   .control-btns-container > input[type="submit"]:hover {
