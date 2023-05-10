@@ -12,16 +12,19 @@ const zipCode = document.querySelector("#zip-code");
 
 const position = document.querySelector("#position");
 
-// const workType = document.querySelectorAll(
-//   "input[type='radio'][name='work-type']"
-// );
+const workType = document.querySelector("input[type='text'][name='work-type']");
+const pronoun = document.querySelector("input[type='text'][name='pronouns']");
+const disability = document.querySelector("input[type='text'][name='disability']");
+const race = document.querySelector("input[type='text'][name='race']");
 
+console.log(workType, pronoun, disability, race);
 
 events = [
   "focus",
   "input",
 ]
 
+/* Check if empty */
 events.forEach(event => {
   firstName.addEventListener(event, () => {
     generalCheck(firstName);
@@ -29,27 +32,6 @@ events.forEach(event => {
   lastName.addEventListener(event, () => {
     generalCheck(lastName);
   });
-});
-
-events.forEach(event => {
-  birthday.addEventListener(event, () => {
-    birthdayCheck(birthday);
-  });
-});
-
-events.forEach(event => {
-  email.addEventListener(event, () => {
-    emailCheck(email);
-  });
-});
-
-events.forEach(event => {
-  contactNum.addEventListener(event, () => {
-    contactNumCheck(contactNum);
-  })
-})
-
-events.forEach(event => {
   street.addEventListener(event, () => {
     generalCheck(street);
   })
@@ -62,26 +44,57 @@ events.forEach(event => {
   state.addEventListener(event, () => {
     generalCheck(state);
   })
+  position.addEventListener(event, () => {
+    generalCheck(position);
+  })
+  workType.addEventListener(event, () => {
+    generalCheck(workType);
+  })
+  pronoun.addEventListener(event, () => {
+    generalCheck(pronoun);
+  })
+  disability.addEventListener(event, () => {
+    generalCheck(disability);
+  })
+  race.addEventListener(event, () => {
+    generalCheck(race);
+  })
+});
+
+
+/* Stricter validation for birthday */
+events.forEach(event => {
+  birthday.addEventListener(event, () => {
+    birthdayCheck(birthday);
+  });
+});
+
+/* Stricter validation for email */
+events.forEach(event => {
+  email.addEventListener(event, () => {
+    emailCheck(email);
+  });
+});
+
+/* Stricter validation for contact number */
+events.forEach(event => {
+  contactNum.addEventListener(event, () => {
+    contactNumCheck(contactNum);
+  })
 })
 
+
+/* Stricter validation for zip code */
 events.forEach(event => {
   zipCode.addEventListener(event, () => {
     zipCheck(zipCode);
   })
 })
 
-events.forEach(event => {
-  position.addEventListener(event, () => {
-    generalCheck(position);
-  })
-})
 
 function generalCheck(name) {
-  console.log(name);
-
   let label = name.nextElementSibling
   if (!name.value) {
-    // let msg = label.innerHTML
     name.classList.add("error");
     label.classList.add("error");
     label.innerHTML = " Must not be empty";
